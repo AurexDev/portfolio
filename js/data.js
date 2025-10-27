@@ -1,6 +1,6 @@
 /* Data module for your portfolio */
 
-export const gitLink = "https://github.com";
+export const gitLink = "https://github.com/AurexDev/portfolio/";
 export const gitImage = "https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png";
 
 export const pages = {
