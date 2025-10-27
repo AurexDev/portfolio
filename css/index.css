@@ -1,0 +1,203 @@
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	margin: 0;
+	background: linear-gradient(90deg, #05070d, #4f0952, #05070d);
+	background-size: 300% 300%;
+	animation: gradientMove 10s ease-in infinite;
+	font-family: 'Montserrat', sans-serif;
+	font-size: large;
+}
+
+/* nav bar */
+
+#nav {
+	padding: 1rem 2rem;
+}
+
+#nav ul {
+	list-style: none;
+	display: flex;
+	gap: 1.5rem;
+}
+
+#nav ul li a {
+	text-decoration: none;
+	color: #e0e0ff;
+	font-weight: bold;
+	transition: color 0.5s ease;
+}
+
+#nav ul li a:hover {
+	color: #ff79c6;
+	text-shadow: 0 0 5px #180202;
+}
+
+#page a {
+	text-decoration: none;
+	color: #e0e0ff;
+	font-weight: bold;
+	transition: color 0.2s ease;
+}
+
+#page a:hover {
+	color: #ff79c6;
+	text-shadow: 0 0 5px #180202;
+}
+
+/* github introvert cat */
+
+#nav ul li:last-child {
+	margin-left: auto;
+}
+
+.git-wrapper {
+	display: inline-block;
+	background-color: black;
+	padding: 2px;
+	border-radius: 4px;
+}
+
+.git-icon {
+	width: 24px;
+	height: 24px;
+	object-fit: contain;
+	filter: invert(1);
+	border-radius: 4px;
+	transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.git-link:hover .git-icon {
+	transform: scale(1.1);
+	filter: invert(0);
+}
+
+/* content */
+
+.page {
+	flex: 1 0 auto;
+	padding: 1rem 3%;
+	color: rgb(242, 235, 215);
+	overflow-y: auto;
+	text-align: center;
+	align-items: center;
+}
+
+.page ul {
+	list-style-position: inside;
+	text-align: center;
+	padding-left: 0;
+}
+
+/* previous projects */
+
+.projects-list {
+	list-style: none;
+	padding: 0;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 1rem;
+}
+
+.project-card {
+	display: flex;
+	flex-direction: column;
+	background: rgba(0, 0, 0, 0.5);
+	border-radius: 8px;
+	padding: 0.5rem;
+	width: 250px;
+	transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+	transform: scale(1.05);
+}
+
+.project-img {
+	width: 100%;
+	border-radius: 6px;
+	object-fit: cover;
+	margin-bottom: 0.5rem;
+}
+
+.project-info p {
+	margin: 0.25rem 0 0;
+	font-size: 0.9rem;
+	color: #f2ebd7;
+}
+
+.project-img-wrapper {
+	position: relative;
+	display: inline-block;
+}
+
+.hover-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	border-radius: 6px;
+}
+
+.project-img-wrapper:hover .hover-overlay {
+	opacity: 1;
+}
+
+.hover-overlay a {
+	color: #ff79c6;
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 1rem;
+	background: rgba(0, 0, 0, 0.5);
+	padding: 0.3rem 0.6rem;
+	border-radius: 4px;
+}
+
+.hover-overlay a:hover {
+	background: rgba(255, 255, 255, 0.2);
+}
+
+#info {
+	flex-shrink: 0;
+	padding: 0.5rem 0;
+	text-align: center;
+	background: rgba(0, 0, 0, 0.85);
+	color: rgb(242, 235, 215);
+}
+
+#info a {
+	text-decoration: none;
+	color: #e0e0ff;
+	font-weight: bold;
+	transition: color 0.2s ease;
+}
+
+#info a:hover {
+	color: #ff79c6;
+	text-shadow: 0 0 5px #180202;
+}
+
+
+/* animations */
+
+@keyframes gradientMove {
+	0% {
+		background-position: 0% 50%;
+	}
+
+	50% {
+		background-position: 100% 50%;
+	}
+
+	100% {
+		background-position: 0% 50%;
+	}
+}
