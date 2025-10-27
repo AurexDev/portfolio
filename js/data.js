@@ -119,4 +119,4 @@ export const pages = {
 
 };
 
-export const info = `Reach me out on <a href="https://www.roblox.com/users/8791189802/profile">roblox</a> and on discord @aurexdev`
+export const info = `Reach me out on <a href="https://www.roblox.com/users/8791189802/profile">roblox</a> and on <a href="https://discord.com/users/1109520145757524089">discord</a>`
