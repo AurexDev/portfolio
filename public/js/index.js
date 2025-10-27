@@ -1,4 +1,4 @@
-import { pages, gitLink, gitImage, info } from "./data.js";
+import { pages, gitLink, gitImage, titles, baseTitle, defaultTitle, info } from "./data.js";
 
 const page = document.getElementById("page");
 const params = new URLSearchParams(window.location.search);
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	infoBar.innerHTML = info;
 
-	// github introvert cat
+	// github invertocat
 	const gitItem = document.createElement("li");
 
 	const gitLinkEl = document.createElement("a");
@@ -28,6 +28,8 @@ document.addEventListener("DOMContentLoaded", function () {
 	gitIcon.src = gitImage;
 	gitIcon.alt = "GitHub";
 	gitIcon.classList.add("git-icon");
+
+	document.title = (titles[selected] || defaultTitle) + baseTitle;
 
 	gitWrapper.appendChild(gitIcon);
 	gitLinkEl.appendChild(gitWrapper);

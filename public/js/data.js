@@ -119,4 +119,15 @@ export const pages = {
 
 };
 
+export const titles = {
+	home: "Home",
+	c_cpp: "C/C++ Projects",
+	roblox: "Roblox Scripting",
+	side: "Side Projects"
+}
+
+export const defaultTitle = "Home";
+
+export const baseTitle = " | aurexdev's portfolio"
+
 export const info = `Reach me out on <a href="https://www.roblox.com/users/8791189802/profile">roblox</a> and on <a href="https://discord.com/users/1109520145757524089">discord</a>`
